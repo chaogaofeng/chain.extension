@@ -45,9 +45,9 @@ const Coins = () => {
         />
 
         <Grid gap={12}>
-          {isWalletEmpty && (
+          {/* {isWalletEmpty && (
             <FormError>{t("Coins required to post transactions")}</FormError>
-          )}
+          )} */}
 
           <Flex className={styles.select}>
             {!isWalletEmpty && <SelectMinimumValue />}
@@ -99,9 +99,7 @@ export const useCoins = (denoms?: Denom[]) => {
       const valueByUST = calcValueByUST({ amount: balance, denom }) ?? 0
       return { denom, balance, value: value, $: valueByUST }
     })
-    .filter(
-      ({ denom, balance }) => ["uluna", "uusd"].includes(denom) || has(balance)
-    )
+    .filter(({ denom, balance }) => ["ugnc"].includes(denom) || has(balance))
 
   const coins = sortByDenom(
     nativeTokenValues,

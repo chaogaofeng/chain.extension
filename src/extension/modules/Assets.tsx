@@ -31,9 +31,9 @@ const Assets = () => {
   return (
     <ExtensionPage {...state} header={<ConnectedWallet />}>
       <Grid gap={16}>
-        {isWalletEmpty && (
+        {/* {isWalletEmpty && (
           <FormError>{t("Coins required to post transactions")}</FormError>
-        )}
+        )} */}
 
         <div className={styles.assets}>
           {filtered.map((item) => {

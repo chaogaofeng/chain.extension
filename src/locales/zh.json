@@ -1,17 +1,17 @@
 {
   "Blockchain": {
-    "Mnemonic": "",
+    "Mnemonic": "组记词",
     "Address": "地址",
     "Wallet": "钱包",
     "Wallets": "",
-    "Coins": "货币",
-    "Tokens": "",
-    "Balance": "",
-    "Tx hash": "",
+    "Coins": "代币",
+    "Tokens": "合约代币",
+    "Balance": "余额",
+    "Tx hash": "交易哈希",
     "Gas": "",
     "Tax": "税金",
     "Fee": "手续费",
-    "Memo": "Memo",
+    "Memo": "备注",
     "decimals": "",
     "Buy": "",
     "Exchanges": "",
@@ -21,11 +21,11 @@
   "Form": {
     "Amount": "数量",
     "Recipient": "接受者",
-    "Name": "智能合约名称",
+    "Name": "钱包名称",
     "optional": "",
-    "Submit": "",
+    "Submit": "提交",
     "Confirm": "确认",
-    "Reset": ""
+    "Reset": "重置"
   },
   "Validate": {
     "{{label}} is required": "请输入{{label}}",
@@ -198,10 +198,10 @@
   },
   "Contract": {
     "Upload": "上传",
-    "Instantiate": "",
+    "Instantiate": "部署",
     "Query": "查询",
-    "Execute": "",
-    "Upload a wasm file": "",
+    "Execute": "执行",
+    "Upload a wasm file": "合约代码",
     "File": "文件",
     "Size": "文件大小",
     "Instantiate a code": ""
@@ -211,7 +211,7 @@
     "Collection": ""
   },
   "Address book": {
-    "Address book": "",
-    "Add a new address": ""
+    "Address book": "地址簿",
+    "Add a new address": "新增地址"
   }
 }

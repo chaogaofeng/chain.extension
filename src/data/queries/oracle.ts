@@ -1,3 +1,4 @@
+import { Coins, Dec } from "@gnchain/chain.js"
 import { useCallback, useMemo } from "react"
 import { useQuery } from "react-query"
 import { getAmount, sortCoins, sortDenoms } from "utils/coin"
@@ -7,31 +8,45 @@ import { useCurrency } from "../settings/Currency"
 import { useLCDClient } from "./lcdClient"
 
 export const useActiveDenoms = () => {
-  const lcd = useLCDClient()
-  return useQuery(
-    [queryKey.oracle.activeDenoms],
-    async () => {
-      const activeDenoms = await lcd.oracle.activeDenoms()
-      return sortDenoms(["uluna", ...activeDenoms])
-    },
-    { ...RefetchOptions.INFINITY }
-  )
+  return { data: ["ugnc"] }
+  // const lcd = useLCDClient()
+  // return useQuery(
+  //   [queryKey.oracle.activeDenoms],
+  //   async () => {
+  //     const activeDenoms = await lcd.oracle.activeDenoms()
+  //     return sortDenoms(["uluna", ...activeDenoms])
+  //   },
+  //   { ...RefetchOptions.INFINITY }
+  // )
 }
 
 export const useExchangeRates = () => {
-  const lcd = useLCDClient()
-  return useQuery(
-    [queryKey.oracle.exchangeRates],
-    () => lcd.oracle.exchangeRates(),
-    { ...RefetchOptions.DEFAULT }
-  )
+  return { data: new Coins() }
+  // const lcd = useLCDClient()
+  // return useQuery(
+  //   [queryKey.oracle.exchangeRates],
+  //   () => lcd.oracle.exchangeRates(),
+  //   { ...RefetchOptions.DEFAULT }
+  // )
 }
 
 export const useOracleParams = () => {
-  const lcd = useLCDClient()
-  return useQuery([queryKey.oracle.params], () => lcd.oracle.parameters(), {
-    ...RefetchOptions.INFINITY,
-  })
+  // const lcd = useLCDClient()
+  // return useQuery([queryKey.oracle.params], () => lcd.oracle.parameters(), {
+  //   ...RefetchOptions.INFINITY,
+  // })
+  return {
+    data: {
+      vote_period: 5,
+      vote_threshold: new Dec(0.5),
+      reward_band: new Dec(0.12),
+      reward_distribution_window: 9400000,
+      whitelist: [],
+      slash_fraction: new Dec(0.0001),
+      slash_window: 432000,
+      min_valid_per_window: new Dec(0.05),
+    },
+  }
 }
 
 /* helpers */

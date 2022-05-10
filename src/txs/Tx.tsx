@@ -13,9 +13,9 @@ import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
 import { isDenom, isDenomIBC, readDenom } from "@terra.kitchen/utils"
 import { Coin, Coins, LCDClient } from "@gnchain/chain.js"
 import { CreateTxOptions, Fee } from "@gnchain/chain.js"
-import { ConnectType, UserDenied } from "@terra-money/wallet-provider"
-import { CreateTxFailed, TxFailed } from "@terra-money/wallet-provider"
-import { useWallet, useConnectedWallet } from "@terra-money/wallet-provider"
+import { ConnectType, UserDenied } from "@gnchain/wallet-provider"
+import { CreateTxFailed, TxFailed } from "@gnchain/wallet-provider"
+import { useWallet, useConnectedWallet } from "@gnchain/wallet-provider"
 
 import { Contents } from "types/components"
 import { has } from "utils/num"
@@ -444,9 +444,9 @@ export default Tx
 
 /* utils */
 export const getInitialGasDenom = (bankBalance: Coins) => {
-  const denom = head(sortCoins(bankBalance))?.denom ?? "uusd"
-  const uusd = getAmount(bankBalance, "uusd")
-  return has(uusd) ? "uusd" : denom
+  const denom = head(sortCoins(bankBalance))?.denom ?? "gnc"
+  const uusd = getAmount(bankBalance, "gnc")
+  return has(uusd) ? "gnc" : denom
 }
 
 interface Params {

@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from "react"
 import { useQuery } from "react-query"
 import BigNumber from "bignumber.js"
-import * as anchor from "@anchor-protocol/anchor.js"
+import * as anchor from "@gnchain/anchor"
 import { readAmount, toAmount } from "@terra.kitchen/utils"
 import { Coins } from "@gnchain/chain.js"
 import { has } from "utils/num"

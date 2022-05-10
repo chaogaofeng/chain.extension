@@ -9,7 +9,7 @@ const NetworkError = () => {
   const { t } = useTranslation()
   const [network, setNetwork] = useNetworkState()
 
-  const isLocalTerra = network === "localterra"
+  const isLocalTerra = network === "localhost"
 
   return (
     <FlexColumn gap={20}>
@@ -20,18 +20,18 @@ const NetworkError = () => {
           {network === "mainnet"
             ? t("Too many requests. Try again later.")
             : isLocalTerra
-            ? t("LocalTerra is not running")
+            ? t("localhost is not running, please start")
             : t(`${network} is not running`)}
         </h1>
 
-        {isLocalTerra && (
+        {/* {isLocalTerra && (
           <ExternalLink href="https://github.com/terra-money/localterra">
             {t("Learn more")}
           </ExternalLink>
-        )}
+        )} */}
       </article>
 
-      {network === "mainnet" ? (
+      {/* {network === "mainnet" ? (
         <Button onClick={() => window.location.reload()} size="small" outline>
           {t("Refresh")}
         </Button>
@@ -39,7 +39,7 @@ const NetworkError = () => {
         <Button onClick={() => setNetwork("mainnet")} size="small" outline>
           {t("Back to mainnet")}
         </Button>
-      )}
+      )} */}
     </FlexColumn>
   )
 }

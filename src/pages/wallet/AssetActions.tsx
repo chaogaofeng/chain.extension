@@ -15,7 +15,7 @@ import { Props } from "./Asset"
 
 const AssetActions = ({ token, symbol, balance }: Props) => {
   const { t } = useTranslation()
-  const isWalletEmpty = useIsWalletEmpty()
+  const isWalletEmpty = false //useIsWalletEmpty()
 
   const { data: pairs } = useCW20Pairs()
 
@@ -28,7 +28,7 @@ const AssetActions = ({ token, symbol, balance }: Props) => {
 
   return (
     <ExtraActions>
-      {(token === "uluna" || token === "uusd") && (
+      {/* {(token === "uluna" || token === "uusd") && (
         <ModalButton
           title={t("Buy {{symbol}}", { symbol })}
           renderButton={(open) => (
@@ -43,7 +43,7 @@ const AssetActions = ({ token, symbol, balance }: Props) => {
         >
           <Buy token={token} />
         </ModalButton>
-      )}
+      )} */}
 
       <InternalLink
         icon={<ShortcutOutlinedIcon style={{ fontSize: 18 }} />}
@@ -53,14 +53,14 @@ const AssetActions = ({ token, symbol, balance }: Props) => {
         {t("Send")}
       </InternalLink>
 
-      <InternalLink
+      {/* <InternalLink
         icon={<RestartAltIcon style={{ fontSize: 18 }} />}
         to="/swap"
         state={token}
         disabled={isWalletEmpty || !has(balance) || !getIsSwappableToken(token)}
       >
         {t("Swap")}
-      </InternalLink>
+      </InternalLink> */}
     </ExtraActions>
   )
 }

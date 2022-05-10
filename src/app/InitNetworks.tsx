@@ -19,8 +19,13 @@ const InitNetworks: FC = ({ children }) => {
       })
 
       const networks = {
-        ...chains,
-        localterra: { ...chains.localterra, preconfigure: true },
+        //...chains,
+        localhost: {
+          name: "localhost",
+          chainID: "gnchain_45-1",
+          lcd: "http://localhost:1317",
+          preconfigure: true,
+        },
       }
 
       setNetworks({

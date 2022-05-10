@@ -1,5 +1,5 @@
 export const getStoredNetwork = () => {
-  return localStorage.getItem("network") ?? "mainnet"
+  return localStorage.getItem("network") ?? "localhost"
 }
 
 export const storeNetwork = (network: NetworkName) => {

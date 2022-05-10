@@ -163,10 +163,11 @@ const useSwapSpread = () => {
 }
 
 const useTobinTax = (askAsset?: CoinDenom) => {
-  const { data: oracleParams } = useOracleParams()
-  const tobinTax = oracleParams?.whitelist.find(
-    ({ name }) => name === askAsset
-  )?.tobin_tax
+  // const { data: oracleParams } = useOracleParams()
+  // const tobinTax = oracleParams?.whitelist.find(
+  //   ({ name }) => name === askAsset
+  // )?.tobin_tax
 
-  return tobinTax?.toString()
+  // return tobinTax?.toString()
+  return "0"
 }

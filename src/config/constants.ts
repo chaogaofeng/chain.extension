@@ -32,5 +32,4 @@ export const DEFAULT_GAS_ADJUSTMENT = 2
 export const TERRASWAP_COMMISSION_RATE = 0.003
 
 /* placeholder */
-// https://github.com/terra-money/localterra
-export const SAMPLE_ADDRESS = "terra1x46rqay4d3cssq8gxxvqz8xt6nwlz4td20k38v"
+export const SAMPLE_ADDRESS = "gnc1qxcrws5mytpzwkk4tn4dyysw2ru96na3kvhk65"

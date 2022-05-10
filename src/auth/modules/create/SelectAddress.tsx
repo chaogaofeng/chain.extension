@@ -27,7 +27,7 @@ const SelectAddress = () => {
     ["mnemonic", mnemonic, index],
     async () => {
       const results = await Promise.allSettled(
-        ([118, 330] as const).map(async (bip) => {
+        ([118] as const).map(async (bip) => {
           const mk = new MnemonicKey({ mnemonic, coinType: bip, index })
           const address = mk.accAddress
           const [balance] = await lcd.bank.balance(address)

@@ -34,7 +34,7 @@ const SwitchWallet = () => {
 
   return (
     <Grid gap={8}>
-      <SelectPreconfigured />
+      {/* <SelectPreconfigured /> */}
       <ExtensionList list={list} />
     </Grid>
   )
