@@ -36,7 +36,7 @@ function validateHostname() {
     if (hostname.includes(key.toLowerCase())) {
       if (whitelist.some((v) => hostname.endsWith(v))) return
       if (value.some((v) => hostname.endsWith(v))) return
-      alert(`Warning from Terra Station Wallet extension:
+      alert(`Warning from Web Station Wallet extension:
 Ensure that the ${hostname} which includes "${key}" is legitimate.
 Never provide your wallet seed phrase.`)
     }

@@ -31,7 +31,8 @@ const FinderLink: FC<Props> = forwardRef(
       : "address"
 
     const value = rest.value ?? children
-    const link = [FINDER, networkName, path, value].join("/")
+    // const link = [FINDER, networkName, path, value].join("/")
+    const link = "http://localhost:3001/transactions/" + value
     const className = classNames(attrs.className, styles.link)
 
     return (

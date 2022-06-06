@@ -7,7 +7,7 @@ const Logo = () => {
 
   return (
     <Link to="/" className={styles.logo}>
-      <img src={favicon} alt="Terra Station" width={20} height={20} />
+      <img src={favicon} alt="Web Station" width={20} height={20} />
     </Link>
   )
 }
